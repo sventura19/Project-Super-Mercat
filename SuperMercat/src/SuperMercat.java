@@ -2,8 +2,6 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Scanner;
-
 
 public class SuperMercat {
     public static void main(String[] args) throws IOException {
@@ -13,11 +11,11 @@ public class SuperMercat {
 
     }
 
-    void menuPrincipal(){
+   /* void menuPrincipal(){
         System.out.println("Gestio de supermercat");
         System.out.println("1. Gestio Stock");
         System.out.println("2.");
-    }
+    }*/
 
     public static void Datos(String archivo) throws FileNotFoundException, IOException {
         String cadena;
