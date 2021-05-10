@@ -1,36 +1,23 @@
-﻿import java.io.BufferedReader;
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 
 public class SuperMercat {
-    public static void main (String [] args) throws IOException {
+    public static void main(String[] args) throws IOException {
 
-        Datos("Stock.txt");
-        segon.saluda();
-        //leerStock();
+        Datos("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt");
+        Ventas.main();
+
     }
 
-/*
-    static void leerStock(){
-        Scanner e = new Scanner(System.in);
-
-        String p;
-
-            p = e.next();
-            System.out.println(p);
-
-            p = e.next();
-            System.out.println(p);
-
-            p = e.next();
-            System.out.println(p);
-
-        while (p.equals("-1"));
+    void menuPrincipal(){
+        System.out.println("Gestio de supermercat");
+        System.out.println("1. Gestio Stock");
+        System.out.println("2.");
     }
-
-     */
 
     public static void Datos(String archivo) throws FileNotFoundException, IOException {
         String cadena;

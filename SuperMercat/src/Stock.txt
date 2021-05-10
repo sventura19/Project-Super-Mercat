@@ -1,4 +1,10 @@
-1 manzanas 1.99
-2 leche 0.95
-3 pan 1.25
--1
+1 Arroz 12.3
+2 Pizza 10
+3 Jugo 7.21
+4 Fideo 10.5
+5 Carne 15.9
+6 Pollo 11.12
+7 Pescado 13.7
+8 Harina 8.32
+9 Cebolla 2.99
+10 Atun 9.67
