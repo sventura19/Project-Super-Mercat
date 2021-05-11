@@ -21,7 +21,7 @@ public class Ventas {
             br = new BufferedReader(Fr);
             String linea;
             String delimiter = ",";
-            //Matriz estática de 2 x 5
+            //Matriz estática
             String matriz[][] = new String[10][1];
             //Cuenta las líneas y a la vez sería el número de filas
             int numlinea=0;
