@@ -56,7 +56,7 @@ public class Ventas {
         } catch (IOException e) {
             System.out.println(e);
         }
-        do {
+       /* do {
             //el numero del articulo hace referencia ala posicion del nombre del producto
             System.out.print("Igrese el numero del articulo que desea comprar: ");
             numeroProducto = Integer.parseInt(sc.nextLine());
@@ -73,6 +73,6 @@ public class Ventas {
             System.out.print("Desea comprar otro producto (S/N): ");
             continuar = sc.nextLine();
         } while (continuar.equalsIgnoreCase("s"));
-        System.out.println("Gracia por su compra");
+        System.out.println("Gracia por su compra");*/
     }
 }
