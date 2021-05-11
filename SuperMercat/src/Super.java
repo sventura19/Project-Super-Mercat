@@ -109,7 +109,7 @@ public class Super {
         BufferedReader br = null;
         try {
             stock = new File("Stock.txt");
-            fr = new FileReader("/Users/eduardoroldan/IdeaProjects/XML/Supermercat/src/Stock.txt");
+            fr = new FileReader("//Stock.txt");
             br = new BufferedReader(fr);
             String mostraStock;
             while ((mostraStock = br.readLine()) != null)
