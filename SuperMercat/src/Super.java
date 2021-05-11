@@ -7,6 +7,8 @@ import java.io.*;
 public class Super {
     public static void main(String[] args) {
         menuPrincipal();
+        String [][] stock = new String [1000][3];
+        while (stock != null);
     }
     public static void menuPrincipal() {
         Scanner entrada = new Scanner(System.in);
@@ -76,7 +78,7 @@ public class Super {
         System.out.println("-----------------------------------------------------");
         opció=entrada.nextInt();
         if(opció == 1){
-            començaTicket();
+         //   començaTicket();
         }
         else if (opció == 2){
             menuPrincipal();
@@ -101,6 +103,13 @@ public class Super {
             menuPrincipal();
         }
     }
+    public static void rellenaStock(String[][]stock){
+        for (int n = 0; n < stock.length; n++){
+            for (int j = 0; j < stock[n].length; j++){
+
+            }
+        }
+    }
     public static void mostraStock(){
         int volver;
         Scanner entrada = new Scanner(System.in);
@@ -109,7 +118,7 @@ public class Super {
         BufferedReader br = null;
         try {
             stock = new File("Stock.txt");
-            fr = new FileReader("/Users/eduardoroldan/IdeaProjects/XML/Supermercat/src/Stock.txt");
+            fr = new FileReader("/Users/eduardoroldan/IdeaProjects/Project-Super-Mercat/SuperMercat/src/Stock.txt");
             br = new BufferedReader(fr);
             String mostraStock;
             while ((mostraStock = br.readLine()) != null)
@@ -129,10 +138,16 @@ public class Super {
         volver=entrada.nextInt();
         mostraMenuStock();
     }
-    public static void mostraAfegir(){
 
-    }
-    public static void començaTicket(){
+    public static void mostraAfegir(){
+        try{
+            FileWriter fw = new FileWriter("/Users/eduardoroldan/IdeaProjects/Project-Super-Mercat/SuperMercat/src/Stock.txt",true);
+            fw.write("aaaaa");
+            fw.close();
+        }
+        catch(IOException ex){
+            System.out.println("fitxer no trobat");
+        }
 
     }
 }
