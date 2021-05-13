@@ -7,6 +7,9 @@ import java.io.*;
 public class Super {
     public static void main(String[] args) {
         menuPrincipal();
+        String [][] stock = new String [1000][3];
+        while (stock != null);
+        rellenaStock(stock);
     }
     public static void menuPrincipal() {
         Scanner entrada = new Scanner(System.in);
@@ -35,7 +38,7 @@ public class Super {
                 System.exit(0);
             }
         }
-        while (opció > 4);
+        while (opció > 4 || opció < 0);
         System.out.println("no és una opció correcta, escull entre");
     }
     public static void mostraMenuStock() {
@@ -54,12 +57,32 @@ public class Super {
         System.out.println("-----------------------------------------------------");
         opció = entrada.nextInt();
         if (opció == 1) {
-            mostraAfegir();
+            menuAfegir();
         } else if (opció == 2) {
             mostraStock();
         } else if (opció == 3) {
             menuPrincipal();
         }
+    }
+    public static void menuAfegir(){
+        Scanner entrada = new Scanner (System.in);
+        String producte="";
+        System.out.println("******************* SUPERMERCAT *********************");
+        System.out.println(" ");
+        System.out.println("----------------  Afegir productes  -----------------");
+        System.out.println(" ");
+        System.out.println("    Codi          Nom del producte         Preu      ");
+        System.out.println("   ------       -------------------       ------     ");
+
+        try{
+            FileWriter fw = new FileWriter("/Users/eduardoroldan/IdeaProjects/Project-Super-Mercat/SuperMercat/src/Stock.txt",true);
+            fw.write(producte);
+            fw.close();
+        }
+        catch(IOException ex){
+            System.out.println("fitxer no trobat");
+        }
+
     }
     public static void mostraMenuVendes(){
         Scanner entrada = new Scanner (System.in);
@@ -76,7 +99,7 @@ public class Super {
         System.out.println("-----------------------------------------------------");
         opció=entrada.nextInt();
         if(opció == 1){
-            començaTicket();
+         //   començaTicket();
         }
         else if (opció == 2){
             menuPrincipal();
@@ -101,6 +124,32 @@ public class Super {
             menuPrincipal();
         }
     }
+    public static void rellenaStock(String[][]stock){
+        String palabra="";
+        int x=0;
+        int y=0;
+        try(Scanner entradaStock = new Scanner (new File("/Users/eduardoroldan/IdeaProjects/Project-Super-Mercat/SuperMercat/src/Stock.txt"))){
+        while(entradaStock.hasNext()){
+            palabra=entradaStock.next();
+            stock[x][y]=palabra;
+            y++;
+            if(y==3){
+                x++;
+                y=0;
+            }
+        }
+        }
+        catch(FileNotFoundException e){
+            System.out.println(e);
+
+        }
+        String producte="";
+        for (int n = 0; n < stock.length; n++){
+            for (int j = 0; j < stock[n].length; j++){
+               // stock[n][j]=;
+            }
+        }
+    }
     public static void mostraStock(){
         int volver;
         Scanner entrada = new Scanner(System.in);
@@ -109,7 +158,7 @@ public class Super {
         BufferedReader br = null;
         try {
             stock = new File("Stock.txt");
-            fr = new FileReader("//Stock.txt");
+            fr = new FileReader("/Users/eduardoroldan/IdeaProjects/Project-Super-Mercat/SuperMercat/src/Stock.txt");
             br = new BufferedReader(fr);
             String mostraStock;
             while ((mostraStock = br.readLine()) != null)
@@ -129,10 +178,19 @@ public class Super {
         volver=entrada.nextInt();
         mostraMenuStock();
     }
-    public static void mostraAfegir(){
+
+    /*public static void mostraAfegir(){
+        String producte="";
+        try{
+            FileWriter fw = new FileWriter("/Users/eduardoroldan/IdeaProjects/Project-Super-Mercat/SuperMercat/src/Stock.txt",true);
+            fw.write(producte);
+            fw.close();
+        }
+        catch(IOException ex){
+            System.out.println("fitxer no trobat");
+        }
 
     }
-    public static void començaTicket(){
-
-    }
+*/
 }
+
