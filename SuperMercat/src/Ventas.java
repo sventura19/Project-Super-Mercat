@@ -4,7 +4,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 public class Ventas {
-    public static void main() {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String continuar;
         String productoComprado = "";
@@ -13,11 +13,13 @@ public class Ventas {
         int numeroProducto;
         int cantidad;
         File archivo = null;
+        //File txt = new File("Stock.txt");
         FileReader Fr = null;
         BufferedReader br = null;
         try {
             archivo = new File("C:\\Users\\sergi\\Google Drive\\ASIX-1 20-21\\ASIX M03\\UF03\\SuperMercat\\src\\supermercat\\Stock.txt");
             Fr = new FileReader(archivo.toString());
+            //Fr = new FileReader(txt.toString());
             br = new BufferedReader(Fr);
             String linea;
             String delimiter = ",";

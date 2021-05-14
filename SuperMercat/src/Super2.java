@@ -7,7 +7,7 @@ public class Super2 {
     public static void main(String[] args) throws IOException {
 
         Datos("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt");
-        Ventas.main();
+        //Ventas.main();
 
     }
 
