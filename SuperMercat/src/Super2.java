@@ -6,12 +6,13 @@ import java.io.IOException;
 public class Super2 {
     public static void main(String[] args) throws IOException {
 
-        Datos("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt");
+        //Datos("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt");
+        Datos("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock.txt");
         //Ventas.main();
 
     }
 
-    public static void Datos(String archivo) throws FileNotFoundException, IOException {
+    public static void Datos(String archivo) throws  IOException {
         String cadena;
         FileReader f = new FileReader(archivo);
         BufferedReader b = new BufferedReader(f);
