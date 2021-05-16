@@ -5,14 +5,22 @@ import java.io.IOException;
 import java.util.Scanner;
 public class Ventas {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
+
+        String lineaA, cont;
+        int opcion;
+        File file= new File("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock2.txt");
+
+
         int numero=0;
         File archivo = null;
         //File txt = new File("Stock.txt");
         FileReader Fr = null;
         BufferedReader br = null;
+
         try {
-            archivo = new File("C:\\Users\\sergi\\Google Drive\\ASIX-1 20-21\\ASIX M03\\UF03\\SuperMercat\\src\\supermercat\\Stock.txt");
+            archivo = new File("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock.txt");
             Fr = new FileReader(archivo.toString());
             //Fr = new FileReader(txt.toString());
             br = new BufferedReader(Fr);
@@ -23,6 +31,11 @@ public class Ventas {
             //Cuenta las líneas y a la vez sería el número de filas
             int numlinea=0;
             //validación si existe línea
+
+            BufferedReader reader=new BufferedReader(new FileReader(file));
+            lineaA=reader.readLine();
+            String[] arry = lineaA.split("\t");
+
             while (((linea = br.readLine()) != null)) {
                 //Imprime la línea
                 System.out.println("Numero "+numero+linea);
@@ -39,6 +52,21 @@ public class Ventas {
                 //Incremento de numero de línea.
                 numlinea++;
             }
+
+            Scanner leer = new Scanner(System.in);
+            System.out.println("-----------------------------------------------");
+            System.out.print("Seleccione una opcion 0-10: ");
+            opcion=leer.nextInt();
+            System.out.println("-----------------------------------------------");
+            System.out.println("La opcion "+opcion+" contiene la cadena: "+arry[opcion]);
+            System.out.println("-----------------------------------------------");
+            System.out.print("¿Desea continuar? (S/N)");
+            cont =leer.next();
+            if (cont.equalsIgnoreCase("s"))
+                main(null);
+            else
+                System.exit(0);
+
             //Impresión de la matriz
             /*
             System.out.println("MATRIZ");
@@ -55,9 +83,12 @@ public class Ventas {
             String arr = matriz[1][0];
             System.out.println(""+arr);
             */
+
         } catch (IOException e) {
             System.out.println(e);
+        }catch (Exception e) {
+            System.out.print("Opcion no valida: ");
+            main(null);
         }
-
     }
 }
