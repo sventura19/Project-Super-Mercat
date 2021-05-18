@@ -27,7 +27,7 @@ public class Ventas2 {
             while (sc.hasNextLine()) {
                 n++;
                 String line = sc.nextLine();
-                System.out.println("Linea: "+n+" = "+line);
+                System.out.println("Opcion: "+n+" = "+line);
             }
             Scanner leer = new Scanner(System.in);
             System.out.println("-----------------------------------------------");
