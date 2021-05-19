@@ -75,12 +75,14 @@ public class Super2 {
         System.out.println("   ------       -------------------       ------     ");
 
         try{
-            FileWriter fw = new FileWriter("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt",true);
+            FileWriter fw = new FileWriter("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock.txt",true);
             fw.write(producte);
             fw.close();
         }
         catch(IOException ex){
             System.out.println("fitxer no trobat");
+        }catch (Exception e) {
+            menuAfegir();
         }
 
     }
@@ -128,7 +130,7 @@ public class Super2 {
         String palabra="";
         int x=0;
         int y=0;
-        try(Scanner entradaStock = new Scanner (new File("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt"))){
+        try(Scanner entradaStock = new Scanner (new File("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock.txt"))){
             while(entradaStock.hasNext()){
                 palabra=entradaStock.next();
                 stock[x][y]=palabra;
@@ -158,7 +160,7 @@ public class Super2 {
         BufferedReader br = null;
         try {
             stock = new File("Stock.txt");
-            fr = new FileReader("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt");
+            fr = new FileReader("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock.txt");
             br = new BufferedReader(fr);
             String mostraStock;
             while ((mostraStock = br.readLine()) != null)
@@ -193,3 +195,4 @@ public class Super2 {
     }
 */
 }
+
