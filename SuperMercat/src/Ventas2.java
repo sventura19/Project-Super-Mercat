@@ -12,10 +12,8 @@ import java.util.Scanner;
 public class Ventas2 {
     public static void main(String[] args) throws FileNotFoundException, IOException {
 
-        File file = new File("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock.txt");
-        File file2= new File("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock2.txt");
-        //File file = new File("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt");
-        //File file2= new File("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock2.txt");
+        File file = new File("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt");
+        File file2= new File("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock2.txt");
         int n=-1;
         String lineaA, cont;
         int opcion;
@@ -27,9 +25,9 @@ public class Ventas2 {
 
             Scanner sc = new Scanner(file);
             while (sc.hasNextLine()) {
-                n++;
+                //n++;
                 String line = sc.nextLine();
-                System.out.println("Opcion: "+n+" = "+line);
+                System.out.println("Opcion: "+line);
             }
             Scanner leer = new Scanner(System.in);
             System.out.println("-----------------------------------------------");
