@@ -81,8 +81,6 @@ public class Super2 {
         }
         catch(IOException ex){
             System.out.println("fitxer no trobat");
-        }catch (Exception e) {
-            menuAfegir();
         }
 
     }
@@ -195,4 +193,3 @@ public class Super2 {
     }
 */
 }
-
