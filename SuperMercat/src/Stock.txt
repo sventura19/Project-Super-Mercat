@@ -1,10 +1,10 @@
-Arroz 12.5
-Pizza 10.6
-Jugo 7.21
-Fideo 10.5
-Carne 15.9
-Pollo 11.12
-Pescado 13.7
-Harina 8.32
-Cebolla 2.99
-Atun 9.67
+0 Arroz 12.5
+1 Pizza 10.6
+2 Jugo 7.21
+3 Fideo 10.5
+4 Carne 15.9
+5 Pollo 11.12
+6 Pescado 13.7
+7 Harina 8.32
+8 Cebolla 2.99
+9 Atun 9.67
