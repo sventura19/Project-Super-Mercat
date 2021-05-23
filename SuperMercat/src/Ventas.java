@@ -10,7 +10,8 @@ public class Ventas {
 
         String lineaA, cont;
         int opcion;
-        File file= new File("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock2.txt");
+        //File file= new File("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock2.txt");
+        File file= new File("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock2.txt");
 
 
         int numero=0;
@@ -20,7 +21,8 @@ public class Ventas {
         BufferedReader br = null;
 
         try {
-            archivo = new File("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock.txt");
+            //archivo = new File("D:\\sergi\\Documents\\IdeaProjects\\SuperMercat\\src\\Stock.txt");
+            archivo = new File("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt");
             Fr = new FileReader(archivo.toString());
             //Fr = new FileReader(txt.toString());
             br = new BufferedReader(Fr);
