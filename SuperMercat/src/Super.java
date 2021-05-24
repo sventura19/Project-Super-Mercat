@@ -126,7 +126,7 @@ public class Super {
         System.out.println("-----------------------------------------------------");
         opció=entrada.nextInt();
         if(opció == 1){
-         //   Ventas.main();
+            ventasEdu.mostraMenuCompra();
         }
         else if (opció == 2){
             menuPrincipal();
@@ -151,20 +151,5 @@ public class Super {
             menuPrincipal();
         }
     }
-
-
-    /*public static void mostraAfegir(){
-        String producte="";
-        try{
-            FileWriter fw = new FileWriter("/Users/eduardoroldan/IdeaProjects/Project-Super-Mercat/SuperMercat/src/Stock.txt",true);
-            fw.write(producte);
-            fw.close();
-        }
-        catch(IOException ex){
-            System.out.println("fitxer no trobat");
-        }
-
-    }
-*/
 }
 
