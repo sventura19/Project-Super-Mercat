@@ -1,9 +1,12 @@
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.Scanner;
 
 
 public class ventasEdu {
+    /*el código de ventas es bastante similar al código de stock y del principal, solamente que el ticket, en este caso, utilizaría
+    dos columnas en vez de tres como tenia en stock.
+     */
     public static void main(String[] args) {
         mostraMenuCompra();
     }

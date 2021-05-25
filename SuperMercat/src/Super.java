@@ -3,6 +3,9 @@ import java.util.Scanner;
 import java.io.*;
 
 public class Super {
+    /* he decidido poner el menú principal como una función ya que, creo que es más cómodo poder manipular el código
+    desde una función y mantener el main solamente con ello.
+     */
     public static void main(String[] args) {
         menuPrincipal();
     }
@@ -22,6 +25,10 @@ public class Super {
             System.out.println(" ");
             System.out.println("-----------------------------------------------------");
             opció = entrada.nextInt();
+            /*
+            dentro del menú he añadido una opción extra de ayuda, en caso de que el usuario no tenga claro el qué hace cada opción.
+            * todo hecho con condicionales para comodidad.
+             */
             if (opció == 1) {
                 mostraMenuStock();
             } else if (opció == 2) {
@@ -32,6 +39,11 @@ public class Super {
                 System.exit(0);
             }
     }
+    /*
+    en la función mostraMenuStock he montado la primera parte ya preparada para registrar y almacenar los productos
+    se crea la matriz para almacenar y mostrar los productos. Ésta misma parte se utilizará para el código de ventas y la
+    generación del ticket.
+     */
     public static void mostraMenuStock() {
         Scanner entrada = new Scanner(System.in);
         String[][] stock = new String[1000][3];
@@ -111,6 +123,10 @@ public class Super {
         System.out.println("------------------------------------------------------");
         System.out.println(" ");
     }
+    /*
+    el código lo hemos pasado fuera del código principal porque ponerlo aquí saturaría y sería más lioso de entender.
+    lo llamo a través de otro archivo.
+     */
     public static void mostraMenuVendes(){
         Scanner entrada = new Scanner (System.in);
         int opció=0;
