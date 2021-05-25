@@ -16,7 +16,7 @@ import java.io.*;
  *
  * @author sergi
  */
-public class Ventas2_1 {
+public class Ventas3 {
     public static void main(String[] args) {
         File archivo = null;
         FileReader Fr = null;
