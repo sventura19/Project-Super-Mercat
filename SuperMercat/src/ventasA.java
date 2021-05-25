@@ -16,7 +16,7 @@ import java.util.Scanner;
  *
  * @author sergi
  */
-public class ventas3 {
+public class ventasA {
     public static void main(String[] args) throws FileNotFoundException, IOException {
 
         File file = new File("D:\\sergi\\Documents\\IdeaProjects\\Project-Super-Mercat\\SuperMercat\\src\\Stock.txt");
